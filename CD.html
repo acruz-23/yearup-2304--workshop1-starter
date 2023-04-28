@@ -12,7 +12,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="./css/style.css" />
-    <script src="scripts/loan-calculator.js"></script>
+    <script src="scripts/cd-calculator.js"></script>
   </head>
   <body>
     <header>
@@ -33,7 +33,7 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="nav nav-pills mr-auto" id="navbarpill">
               <li class="nav-item">
-                <a href="./index.html" class="nav-link active">Home</a>
+                <a href="./index.html" class="nav-link">Home</a>
               </li>
               <li class="nav-item">
                 <a href="./mortgage.html" class="nav-link"
@@ -41,7 +41,7 @@
                 >
               </li>
               <li class="nav-item">
-                <a href="cd.html" class="nav-link">CD Calculator</a>
+                <a href="cd.html" class="nav-link active">CD Calculator</a>
               </li>
               <li class="nav-item">
                 <a href="./annuity.html" class="nav-link">Annuity Calculator</a>
@@ -54,18 +54,18 @@
     <main>
       <div class="container main-container">
         <!-- You should probably add a header and nav bar here... -->
-        <h1>Home</h1>
+        <h1>CD Calculator</h1>
         <div class="row">
           <div class="col-sm-6" id="inputs">
             <div>
-              <label for="loanAmount">Loan Amount</label>
+              <label for="cdDeposit">Deposit</label>
               <div class="input-group mb-3">
                 <div class="input-group-prepend">
                   <span class="input-group-text">$</span>
                 </div>
                 <input
                   type="number"
-                  id="loanAmount"
+                  id="cdDeposit"
                   class="form-control"
                   placeholder="0.00"
                   value=""
@@ -74,11 +74,11 @@
             </div>
 
             <div>
-              <label for="interestRate">Interest Rate per Year</label>
+              <label for="cdRate">Interest Rate per Year</label>
               <div class="input-group mb-3">
                 <input
                   type="number"
-                  id="interestRate"
+                  id="cdRate"
                   class="form-control"
                   placeholder="0"
                   value=""
@@ -90,11 +90,11 @@
             </div>
 
             <div>
-              <label for="loanTerm">Term of Loan in Years</label>
+              <label for="cdTerm">Term of Loan in Years</label>
               <div class="input-group mb-3">
                 <input
                   type="number"
-                  id="loanTerm"
+                  id="cdTerm"
                   class="form-control"
                   placeholder="0"
                   value=""
