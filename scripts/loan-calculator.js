@@ -15,7 +15,6 @@ function onMortCalcBtnClicked() {
   const interestRate =
     Number(document.getElementById("interestRate").value) / 100;
   const monthlyInterestRate = interestRate / 12;
-  console.log("monthly interest rate: " + monthlyInterestRate);
   const loanTerm = Number(document.getElementById("loanTerm").value);
   const monthlyLoanTerm = loanTerm * 12;
   const monthlyPayment =
@@ -23,7 +22,10 @@ function onMortCalcBtnClicked() {
     (monthlyInterestRate / (1 - (1 + monthlyInterestRate) ** -monthlyLoanTerm));
   const loanTotal = monthlyPayment * monthlyLoanTerm;
   document.getElementById("monthlyPayment").innerHTML =
-    monthlyPayment.toFixed(2);
-  document.getElementById("totalCost").innerHTML = loanTotal.toFixed(2);
+    "$" + monthlyPayment.toFixed(2);
+  document.getElementById("totalCost").innerHTML = "$" + loanTotal.toFixed(2);
   console.log("Mort Calc finsihed");
+  //   console.log("monthly interest rate: " + monthlyInterestRate);
+  // console.log("monthly Loan Term: " + monthlyLoanTerm);
+  //
 }

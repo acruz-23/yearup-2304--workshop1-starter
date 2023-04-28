@@ -12,7 +12,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="./css/style.css" />
-    <script src="scripts/loan-calculator.js"></script>
+    <script src="scripts/annuity-calculator.js"></script>
   </head>
   <body>
     <header>
@@ -60,14 +60,14 @@
         <div class="row">
           <div class="col-sm-6" id="inputs">
             <div>
-              <label for="loanAmount">Loan Amount</label>
+              <label for="monthlyPayout">Monthly Payout</label>
               <div class="input-group mb-3">
                 <div class="input-group-prepend">
                   <span class="input-group-text">$</span>
                 </div>
                 <input
                   type="number"
-                  id="loanAmount"
+                  id="monthlyPayout"
                   class="form-control"
                   placeholder="0.00"
                   value=""
@@ -76,11 +76,11 @@
             </div>
 
             <div>
-              <label for="interestRate">Interest Rate per Year</label>
+              <label for="annuityRate">Annuity Interest per Year</label>
               <div class="input-group mb-3">
                 <input
                   type="number"
-                  id="interestRate"
+                  id="annuityRate"
                   class="form-control"
                   placeholder="0"
                   value=""
@@ -92,31 +92,29 @@
             </div>
 
             <div>
-              <label for="loanTerm">Term of Loan in Years</label>
+              <label for="annuityTerm">Life of Annuity</label>
               <div class="input-group mb-3">
                 <input
                   type="number"
-                  id="loanTerm"
+                  id="annuityTerm"
                   class="form-control"
-                  placeholder="0"
+                  placeholder="0 yr."
                   value=""
                 />
               </div>
             </div>
 
             <div>
-              <button class="btn btn-primary" id="mortCalcBtn">
-                Calculate
-              </button>
+              <button class="btn btn-primary" id="pvoCalcBtn">Calculate</button>
             </div>
           </div>
 
           <div class="col-sm-6" class="loan-calculator--outputs">
+            <p>Required Present Value of Ordinary Annuity:</p>
             <p>
-              Monthly Payment:
-              <span><strong id="monthlyPayment">$0.00</strong></span>
+              <span><strong id="pvo">$0.00</strong></span>
             </p>
-            <p>This loan will really cost you: <span id="totalCost">0</span></p>
+            <!-- <p>Interest Accrued: <span id="interestAccrued">0</span></p> -->
           </div>
         </div>
       </div>
